@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Filter, Trash2 } from 'lucide-react';
 import { TodoFiltersProps, FilterType } from '@/types/todo';
 
 const TodoFilters: React.FC<TodoFiltersProps> = ({
@@ -20,7 +19,7 @@ const TodoFilters: React.FC<TodoFiltersProps> = ({
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-2 mb-4">
-        <Filter className="w-5 h-5 text-gray-600" />
+        <span className="text-gray-600">🔍</span>
         <h3 className="text-lg font-semibold text-gray-800">Filter Tasks</h3>
       </div>
       
@@ -52,7 +51,7 @@ const TodoFilters: React.FC<TodoFiltersProps> = ({
             onClick={onClearCompleted}
             className="btn-danger text-sm py-1 px-3 flex items-center gap-2"
           >
-            <Trash2 className="w-3 h-3" />
+            <span className="text-xs">🗑️</span>
             Clear Completed
           </button>
         </div>
